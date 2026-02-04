@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preload" href="/assets/fonts/DejaVuSans.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+  <title>About – ZipShip Assets</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+  <a class="brand" href="/">
+    <img src="/assets/images/logo.svg" alt="ZipShip Assets" />
+  </a>
+  <div class="links">
+    <a class="pill" href="/">Home</a>
+    <a class="pill" href="/about/">About</a>
+    <a class="pill" href="/pricing/">Pricing</a>
+    <a class="pill" href="/legal/privacy.html">Privacy</a>
+  </div>
+</nav>
+
+    <h1 class="smallTitle">About</h1>
+    <p class="pageIntro">
+      Diese Seite testet „Subfolder Routing“ (Ordner mit <code>index.html</code>) auf Vercel/Netlify.
+      Wenn deine Pipeline sauber ist, erreichst du sie unter <code>/about/</code>.
+    </p>
+
+    <div class="panel">
+      <h3>Was hier getestet wird</h3>
+      <p>
+        1) Pfade mit führendem Slash (<code>/assets/…</code>)<br/>
+        2) Mehrere Seiten im Repo<br/>
+        3) Font-Loading + Caching
+      </p>
+    </div>
+
+    <footer class="footer">
+  <span>© <span id="year"></span> ZipShip Assets</span>
+  <span class="dot">•</span>
+  <span id="buildStamp"></span>
+</footer>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

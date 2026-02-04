@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="preload" href="/assets/fonts/DejaVuSans.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+  <title>ZipShip Assets – Static Deploy Test</title>
+  <meta name="description" content="Eine gängige Static-Site mit Bildern, Fonts und mehreren Seiten – ideal für ZipShip → GitHub → Vercel/Netlify." />
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+  <a class="brand" href="/">
+    <img src="/assets/images/logo.svg" alt="ZipShip Assets" />
+  </a>
+  <div class="links">
+    <a class="pill" href="/">Home</a>
+    <a class="pill" href="/about/">About</a>
+    <a class="pill" href="/pricing/">Pricing</a>
+    <a class="pill" href="/legal/privacy.html">Privacy</a>
+  </div>
+</nav>
+
+    <section class="hero">
+      <div class="heroMedia"></div>
+      <div class="heroInner">
+        <div class="kicker">Common Project • Assets Included</div>
+        <h1>Statische Seite mit <span style="color:var(--accent2)">Bildern</span>, <span style="color:var(--accent)">Fonts</span> &amp; Multi-Page Routing</h1>
+        <p class="lede">
+          Dieses ZIP ist „realistischer“ als ein One-Pager: es hat Assets-Ordner, mehrere Seiten,
+          lokale Fonts (TTF) und optimierte Bilder. Keine Build-Tools, damit Deploy-Pipeline-Fehler glasklar sind.
+        </p>
+        <div class="ctaRow">
+          <a class="btn primary" href="#" id="pingBtn">Assets testen</a>
+          <a class="btn ghost" href="/pricing/">Preise ansehen</a>
+        </div>
+        <p class="note" id="status">Status: bereit. (Font + Images sind lokal gebündelt)</p>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <article class="card">
+        <div class="cardMedia">
+          <img src="/assets/images/tile-1.jpg" alt="Hero Visual" loading="lazy" />
+        </div>
+        <div class="pad">
+          <h2>Images im Repo</h2>
+          <p>Mehrere JPGs + SVG-Logo + Favicon – alles lokal, kein CDN.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="cardMedia">
+          <img src="/assets/images/tile-2.jpg" alt="Gallery Tile" loading="lazy" />
+        </div>
+        <div class="pad">
+          <h2>Fonts im Repo</h2>
+          <p>Lokales <code>@font-face</code> über <code>/assets/fonts</code> (TTF) + Preload.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="cardMedia">
+          <img src="/assets/images/tile-3.jpg" alt="Pricing Banner" loading="lazy" />
+        </div>
+        <div class="pad">
+          <h2>Multi-Page</h2>
+          <p><code>/about/</code>, <code>/pricing/</code> und <code>/legal/</code> – sauberer Test für Routing &amp; clean URLs.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section split">
+      <div class="panel">
+        <h3>Quick Checks</h3>
+        <p>
+          Wenn das deployt, sind typischerweise diese Dinge ok: Repo-Root, Publish-Dir,
+          Asset-Pfade, Clean-URLs. Danach können wir einen Build-Projekt-Test (Vite/Next) machen.
+        </p>
+        <div class="code">
+          <div><strong>Assets:</strong> /assets/images/*, /assets/fonts/*</div>
+          <div><strong>CSS:</strong> /assets/css/styles.css</div>
+          <div><strong>JS:</strong> /assets/js/main.js</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Deploy Hinweise</h3>
+        <p>
+          Netlify nutzt <code>netlify.toml</code> (publish "."). Vercel nutzt <code>vercel.json</code>
+          (cleanUrls + Cache Headers für /assets).
+        </p>
+        <div class="code">
+          <div><strong>Netlify:</strong> no build</div>
+          <div><strong>Vercel:</strong> Framework "Other"</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <span>© <span id="year"></span> ZipShip Assets</span>
+  <span class="dot">•</span>
+  <span id="buildStamp"></span>
+</footer>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
